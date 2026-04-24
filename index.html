@@ -38,7 +38,7 @@
         <section id="proposito">
             <div class="container-texto">
                 <h2>Nosso Propósito</h2>
-                <p>Acreditamos que todos merecem acesso a alimentos frescos e saudáveis. Nossa missão é conectar você aos melhores produtores, garantindo a qualidade de primeira de cada item, sem comprometer o seu orçamento.</p>
+                <p>Acreditamos que todos merecem acesso a alimentos frescos e saudáveis. Nossa missão é conectar você aos melhores produtores, garantindo a qualidade de primeira de cada item, sem comprometer o seu orçamento!</p>
             </div>
         </section>
 
@@ -82,6 +82,52 @@
                     <p>Eficiência operacional que se traduz em economia real na sua compra.</p>
                 </div>
             </div>
+
+            <div id="feedback-card" style="max-width: 400px; margin: 40px auto; padding: 25px; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); font-family: sans-serif;">
+    
+    <h3 style="text-align: center; color: #333;">Sua opinião vale muito! 🍎</h3>
+
+    <div style="background: #eee; border-radius: 10px; height: 10px; margin-bottom: 25px; overflow: hidden;">
+        <div id="progress-bar" style="width: 0%; height: 100%; background: linear-gradient(90deg, #2ecc71, #27ae60); transition: width 0.5s ease;"></div>
+    </div>
+
+    <div class="question" style="margin-bottom: 20px;">
+        <p style="margin-bottom: 10px; font-weight: bold;">Como foi o atendimento?</p>
+        <div style="display: flex; justify-content: space-between; font-size: 30px;">
+            <span class="emoji-btn" onclick="selectEmoji(this, 'Péssimo')" style="cursor:pointer; filter:grayscale(1); transition: 0.3s;">😡</span>
+            <span class="emoji-btn" onclick="selectEmoji(this, 'Regular')" style="cursor:pointer; filter:grayscale(1); transition: 0.3s;">😐</span>
+            <span class="emoji-btn" onclick="selectEmoji(this, 'Excelente')" style="cursor:pointer; filter:grayscale(1); transition: 0.3s;">😍</span>
+        </div>
+    </div>
+
+    <div class="question" style="margin-bottom: 20px;">
+        <p style="margin-bottom: 10px; font-weight: bold;">Qualidade das mercadorias:</p>
+        <div id="star-rating" style="display: flex; justify-content: center; gap: 10px;">
+            <span class="star" onclick="selectStar(1)" style="font-size: 30px; cursor: pointer; color: #ccc; transition: 0.3s;">★</span>
+            <span class="star" onclick="selectStar(2)" style="font-size: 30px; cursor: pointer; color: #ccc; transition: 0.3s;">★</span>
+            <span class="star" onclick="selectStar(3)" style="font-size: 30px; cursor: pointer; color: #ccc; transition: 0.3s;">★</span>
+            <span class="star" onclick="selectStar(4)" style="font-size: 30px; cursor: pointer; color: #ccc; transition: 0.3s;">★</span>
+            <span class="star" onclick="selectStar(5)" style="font-size: 30px; cursor: pointer; color: #ccc; transition: 0.3s;">★</span>
+        </div>
+    </div>
+
+    <button id="send-btn" onclick="sendToWhatsApp()" disabled style="width: 100%; padding: 15px; border: none; border-radius: 10px; background: #ccc; color: white; font-weight: bold; cursor: not-allowed; transition: 0.3s;">
+        Enviar para o WhatsApp
+    </button>
+</div>
+
+<style>
+    /* Efeito de brilho para as estrelas selecionadas */
+    .star.active {
+        color: #f1c40f !important;
+        text-shadow: 0 0 15px #f1c40f, 0 0 25px #f39c12;
+        transform: scale(1.2);
+    }
+    .emoji-btn.active {
+        filter: grayscale(0) !important;
+        transform: scale(1.3);
+    }
+</style>
         </section>
     </main>
 
